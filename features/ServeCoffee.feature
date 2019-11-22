@@ -15,6 +15,6 @@ Feature: Serve coffee
   Scenario: Double use
     # Well, sometimes, you just get a coffee.
     Given the coffee machine is started
-    and someone took a coffee
+    And someone took a coffee
     When I take a coffee just after
     Then coffee should be served
