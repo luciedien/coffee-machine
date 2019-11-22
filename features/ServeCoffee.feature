@@ -10,3 +10,11 @@ Feature: Serve coffee
     Given the coffee machine is started
     When I take a coffee
     Then coffee should be served
+    
+      @priority-high
+  Scenario: Double use
+    # Well, sometimes, you just get a coffee.
+    Given the coffee machine is started
+    and someone took a coffee
+    When I take a coffee just after
+    Then coffee should be served
